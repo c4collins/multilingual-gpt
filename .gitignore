@@ -1,0 +1,9 @@
+.env
+# testing
+.benchmarks
+.pytest_cache
+__pycache__
+.vscode
+.venv
+data/*.sqlite
+locales/
