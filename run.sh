@@ -18,7 +18,9 @@ check_git_status(){
     # Check if there are uncommitted changes or files
     if [ $exit_status -ne 0 ]; then
         echo "Warning: There are uncommitted changes or files."
-        # exit 1
+        if [ $PRODUCTION ]; then
+            exit 1
+        fi
     fi
 }
 

@@ -1,6 +1,9 @@
 #!/bin/sh
 echo "Testing python"
-pytest
+
+export TESTING=1
+pytest --cov
+
 
 # Check the exit status of pytest
 pytest_exit_status=$?
@@ -13,3 +16,4 @@ fi
 
 # Continue with the rest of the script
 echo "Pytest succeeded. Continuing with the script."
+export TESTING=0

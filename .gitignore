@@ -1,9 +1,13 @@
 .env
-# testing
+
 .benchmarks
+
+.coverage
 .pytest_cache
+
 __pycache__
 .vscode
 .venv
+
 data/*.sqlite
 locales/*/LC_MESSAGES/*.po~

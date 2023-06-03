@@ -1,4 +1,3 @@
-import fileinput
 import os
 from typing import List
 import openai
