@@ -6,4 +6,4 @@ __pycache__
 .vscode
 .venv
 data/*.sqlite
-locales/**/*.po~
+locales/*/LC_MESSAGES/*.po~

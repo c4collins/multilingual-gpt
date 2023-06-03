@@ -36,7 +36,7 @@ run_script verify_env
 run_script generate_env_template
 run_script upsert_venv
 run_script create_translation_files
-run_script_py get_translations
+run_script_py get_script_translations
 run_script convert_translations_to_machine_code
 run_script python_formatting
 run_script python_testing
