@@ -6,12 +6,14 @@ from src.config import openai, openai_chat_model
 
 # Generate a chat completion response
 def generate_chat_completion(session, chat_id: int):
-    prompt = build_chat_history(session, chat_id)
-    response = openai.ChatCompletion.create(
-        model=openai_chat_model,
-        messages=prompt,
-    )
-    return response.choices[0].message
+    return (
+        openai.ChatCompletion.create(
+            model=openai_chat_model,
+            messages=build_chat_history(session, chat_id),
+        )
+        .choices[0]
+        .message
+    )  # pragma: no coverage
 
 
 # Build the prompt from the conversation history

@@ -8,6 +8,16 @@ from data.models.chat import Chat
 
 
 @fixture(scope="session")
+def chat_completion_chat_id(session):
+    chat = Chat(name="chat completion test chat")
+    session.add(chat)
+    session.commit()
+    session.refresh(chat)
+    chat_id = chat.id
+    yield chat_id
+
+
+@fixture(scope="session")
 def message_chat_id(session):
     chat = Chat(name="message test chat")
     session.add(chat)
