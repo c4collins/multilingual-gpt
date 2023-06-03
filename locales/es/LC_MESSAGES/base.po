@@ -19,37 +19,29 @@ msgstr ""
 
 #: src/chat/prompts.py:3
 msgid "You are an AI assistant, with the following purpose"
-msgstr ""
-
+msgstr "Eres un asistente de IA, con el siguiente propósito."
 #: src/chat/prompts.py:5
 msgid "Choose a number to continue, or 0 to start a new conversation"
-msgstr ""
-
+msgstr "Elige un número para continuar o 0 para comenzar una nueva conversación."
 #: src/chat/prompts.py:8
 #, python-brace-format
 msgid "There are {existing_conversations} existing conversations available."
-msgstr ""
-
+msgstr "Hay {existing_conversations} conversaciones existentes disponibles."
 #: src/chat/prompts.py:11
 msgid "Would you like to continue one of the existing conversations?"
-msgstr ""
-
+msgstr "¿Te gustaría continuar una de las conversaciones existentes?"
 #: src/chat/prompts.py:14
 msgid "What do you want the AI to do?"
-msgstr ""
-
+msgstr "¿Qué quieres que haga la IA?"
 #: src/chat/prompts.py:15
 msgid "What's next?"
-msgstr ""
-
+msgstr "¿Qué sigue?"
 #: src/chat/prompts.py:16
 msgid "Keep going?"
-msgstr ""
-
+msgstr "¿Continuar?"
 #: src/chat/prompts.py:18
 msgid "STARTING CHAT MESSAGE REPLAY"
-msgstr ""
-
+msgstr "INICIANDO RESPUESTA DE MENSAJE DE CHAT"
 #: src/chat/prompts.py:19
 msgid "ENDING CHAT MESSAGE REPLAY"
-msgstr ""
+msgstr "RESPUESTA DE MENSAJE DE CHAT DE CIERRE"

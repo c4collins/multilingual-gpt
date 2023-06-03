@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-02 19:41-0400\n"
+"POT-Creation-Date: 2023-06-03 05:59-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,22 +20,36 @@ msgstr ""
 #: src/chat/prompts.py:3
 msgid "You are an AI assistant, with the following purpose"
 msgstr "Du bist ein AI-Assistent mit folgendem Zweck:"
+
 #: src/chat/prompts.py:5
 msgid "Choose a number to continue, or 0 to start a new conversation"
-msgstr "Wählen Sie eine Zahl, um fortzufahren, oder 0, um ein neues Gespräch zu beginnen."
+msgstr "Wählen Sie eine Zahl, um fortzufahren, oder 0, um eine neue Konversation zu beginnen.""Wählen Sie eine Zahl, um fortzufahren, oder 0, um ein neues Gespräch zu "
+"beginnen."
+
 #: src/chat/prompts.py:8
 #, python-brace-format
 msgid "There are {existing_conversations} existing conversations available."
-msgstr "Es gibt {existing_conversations} vorhandene Unterhaltungen zur Verfügung."
+msgstr "Es gibt {existing_conversations} bereits bestehende Gespräche verfügbar.""Es gibt {existing_conversations} vorhandene Unterhaltungen zur Verfügung."
+
 #: src/chat/prompts.py:11
 msgid "Would you like to continue one of the existing conversations?"
 msgstr "Möchten Sie eine der bestehenden Konversationen fortsetzen?"
+
 #: src/chat/prompts.py:14
 msgid "What do you want the AI to do?"
 msgstr "Was möchtest du, dass die künstliche Intelligenz tut?"
+
 #: src/chat/prompts.py:15
 msgid "What's next?"
 msgstr "Was kommt als nächstes?"
+
 #: src/chat/prompts.py:16
 msgid "Keep going?"
 msgstr "Weitermachen?"
+
+#: src/chat/prompts.py:18
+msgid "STARTING CHAT MESSAGE REPLAY"
+msgstr "STARTENDE CHAT-NACHRICHT ANTWORTEN"
+#: src/chat/prompts.py:19
+msgid "ENDING CHAT MESSAGE REPLAY"
+msgstr "ABSCHLIESSENDE CHAT-NACHRICHT ANTWORTEN"
