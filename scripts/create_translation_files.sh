@@ -40,9 +40,9 @@ copy_or_merge_pot_to_po(){
     echo $filename
     mkdir -p $DIR
     if [ -f "$filename" ]; then
-        msgmerge --update $filename locales/base.pot
+        msgmerge --update "$filename" locales/base.pot
     else
-        cp locales/base.pot $filename
+        cp locales/base.pot "$filename"
     fi
 }
 
@@ -56,7 +56,7 @@ create_po_template src/chat prompts
 # create_po_template src run
 # create_po_template data/models __init__
 
-# replace the charset= value, for wahtever reason the cli option doesn't seem to work and the tests fail if this isn't set
+# replace the charset= value, for whatever reason the cli option doesn't seem to work and the tests fail if this isn't set
 sed -i 's/charset=CHARSET/charset=UTF-8/g' locales/base.pot
 
 # copy or merge the new .pot file into the language-specific .po files

@@ -24,6 +24,26 @@ check_git_status(){
     fi
 }
 
+activate_venv(){
+    if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
+        source "$VENV_DIR"/Scripts/activate
+    else
+        source "$VENV_DIR"/bin/activate
+    fi
+}
+export -f activate_venv
+
+export_from_env(){
+    var_value=$(grep "^$1=" .env | cut -d '=' -f2-)
+    echo "Exporting \$$1=$var_value"
+    export $1="$var_value"
+}
+
+
+echo "Run: PREPARING"
+
+export_from_env VENV_DIR
+
 echo "Run: START"
 
 cat README.md
@@ -36,6 +56,8 @@ run_processing "$lang"
 check_git_status
 
 echo "Run: APPLICATION"
+
+activate_venv
 
 python -m src.run $1
 

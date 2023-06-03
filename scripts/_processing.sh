@@ -3,6 +3,7 @@
 run_script_py(){
     script_name="$1.py"
     echo "Running $script_name"
+    activate_venv
     if python ./scripts/"$script_name"; then
         echo "$script_name succeeded"
         echo ""
