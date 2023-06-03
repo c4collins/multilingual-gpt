@@ -1,6 +1,7 @@
 from data.models.chat import Chat
 from data.models.chat_message import ChatMessage
 from data.models.chat_role import ChatRole
+from src.config import lang
 from src.config.enums.chat import ChatUserRole
 
 
@@ -9,7 +10,7 @@ def add_roled_message(session, chat_id: int, message: str, role_name: ChatUserRo
     role = session.query(ChatRole).filter_by(name=role_name).first()
     chat: Chat = session.get(Chat, chat_id)
     message = ChatMessage(
-        content=message,
+        content=f"{lang}: {message}",
         chat=chat,
         role=role,
         chat_id=chat.id,

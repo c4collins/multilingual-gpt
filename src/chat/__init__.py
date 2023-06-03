@@ -1,4 +1,3 @@
-from pprint import pprint
 from src.config import session
 from data.models.chat import Chat
 from src.chat.messages import (
@@ -6,6 +5,7 @@ from src.chat.messages import (
     add_user_message,
     add_assistant_message,
 )
+from src.utils.text import urlsafe
 from . import cli, prompts, mechanicals
 
 
@@ -32,13 +32,15 @@ def run_conversation_loop(chat_id):
     while not exit:
         exit = _get_input_from_user(chat_id)
         if not exit:
-            pprint(_get_response_from_assistant(chat_id))
+            print()
+            print(_get_response_from_assistant(chat_id))
+            print()
             # exit = not cli.ask_user_to_continue()
 
 
 def start_new_conversation() -> Chat:
-    purpose, chat_name = cli.ask_for_new_chat_purpose()
-    chat = Chat(name=chat_name, purpose=purpose)
+    purpose = cli.ask_for_new_chat_purpose()
+    chat = Chat(name=urlsafe(purpose), purpose=purpose)
     session.add(chat)
     session.commit()
     session.refresh(chat)
