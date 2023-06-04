@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-04 06:41-0400\n"
+"POT-Creation-Date: 2023-06-04 06:38-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,37 +19,29 @@ msgstr ""
 
 #: src/chat/prompts.py:3
 msgid "You are an AI assistant, with the following purpose"
-msgstr ""
-
+msgstr "Jesteś asystentem sztucznej inteligencji o następującym celu"
 #: src/chat/prompts.py:5
 msgid "Choose a number to continue, or 0 to start a new conversation"
-msgstr ""
-
+msgstr "Wybierz liczbę, aby kontynuować, lub 0, aby rozpocząć nową rozmowę."
 #: src/chat/prompts.py:8
 #, python-brace-format
 msgid "There are {existing_conversations} existing conversations available."
-msgstr ""
-
+msgstr "Dostępnych jest {existing_conversations} istniejących rozmów."
 #: src/chat/prompts.py:11
 msgid "Would you like to continue one of the existing conversations?"
-msgstr ""
-
+msgstr "Czy chciałbyś kontynuować jedną z istniejących rozmów?"
 #: src/chat/prompts.py:14
 msgid "What do you want the AI to do?"
-msgstr ""
-
+msgstr "Co chcesz, żeby AI zrobiło?"
 #: src/chat/prompts.py:15
 msgid "What's next?"
-msgstr ""
-
+msgstr "Co dalej?"
 #: src/chat/prompts.py:16
 msgid "Keep going?"
-msgstr ""
-
+msgstr "Idź dalej?"
 #: src/chat/prompts.py:18
 msgid "STARTING CHAT MESSAGE REPLAY"
-msgstr ""
-
+msgstr "ROZPOCZYNANIE WIADOMOŚCI CHATOWEJ ODPowiedź"
 #: src/chat/prompts.py:19
 msgid "ENDING CHAT MESSAGE REPLAY"
-msgstr ""
+msgstr "KONIEC WIADOMOŚCI ROZMOWY"

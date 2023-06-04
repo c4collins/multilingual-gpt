@@ -26,9 +26,9 @@ run_script() {
 }
 
 echo "Process: START"
+. ./scripts/fn_activate_venv.sh
 
 echo "Running config scripts"
-
 SUPPORTED_LANGUAGES="en $1" # es jp de ru po
 export SUPPORTED_LANGUAGES=$SUPPORTED_LANGUAGES
 echo $SUPPORTED_LANGUAGES
