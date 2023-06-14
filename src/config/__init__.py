@@ -17,4 +17,4 @@ except IntegrityError:
     # NOTE: database has been populated
     pass
 
-openai_chat_model = "gpt-3.5-turbo"
+openai_chat_model = "gpt-3.5-turbo-0613"
