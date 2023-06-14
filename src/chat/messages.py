@@ -6,7 +6,7 @@ from src.config.enums.chat import ChatUserRole
 
 
 # Add any message to the conversation
-def add_roled_message(session, chat_id: int, message: str, role_name: ChatUserRole):
+def add_roled_message(session, chat_id: int, message: str, role_name: ChatUserRole, **kwargs):
     role = session.query(ChatRole).filter_by(name=role_name).first()
     chat: Chat = session.get(Chat, chat_id)
     message = ChatMessage(
@@ -15,6 +15,7 @@ def add_roled_message(session, chat_id: int, message: str, role_name: ChatUserRo
         role=role,
         chat_id=chat.id,
         role_id=role.id,
+        **kwargs,
     )
     session.add(message)
     session.commit()
@@ -22,15 +23,15 @@ def add_roled_message(session, chat_id: int, message: str, role_name: ChatUserRo
 
 
 # Add user message to the conversation
-def add_user_message(session, chat_id: int, message: str):
-    add_roled_message(session, chat_id, message, ChatUserRole.USER)
+def add_user_message(session, chat_id: int, message: str, **kwargs):
+    add_roled_message(session, chat_id, message, ChatUserRole.USER, **kwargs)
 
 
 # Add system message to the conversation
-def add_system_message(session, chat_id: int, message: str):
-    add_roled_message(session, chat_id, message, ChatUserRole.SYSTEM)
+def add_system_message(session, chat_id: int, message: str, **kwargs):
+    add_roled_message(session, chat_id, message, ChatUserRole.SYSTEM, **kwargs)
 
 
 # Add assistant message to the conversation
-def add_assistant_message(session, chat_id: int, message: str):
-    add_roled_message(session, chat_id, message, ChatUserRole.ASSISTANT)
+def add_assistant_message(session, chat_id: int, message: str, **kwargs):
+    add_roled_message(session, chat_id, message, ChatUserRole.ASSISTANT, **kwargs)
